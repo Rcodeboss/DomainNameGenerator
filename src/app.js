@@ -11,13 +11,20 @@ window.onload = function() {
   let pronoun = ["the", "our"];
   let adj = ["great", "big"];
   let noun = ["jogger", "racoon"];
+  let four = [".com", ".net", ".us"];
 
-  let string =
-    pronoun[Math.floor(Math.random() * pronoun.length)] +
-    adj[Math.floor(Math.random() * adj.length)] +
-    noun[Math.floor(Math.random() * noun.length)];
+  let string = "";
 
-  document.write(string + ".com");
+  for (let x of pronoun) {
+    for (let y of adj) {
+      for (let a of noun) {
+        for (let b of four) {
+          document.querySelector("#rafa").innerHTML +=
+            "<li>" + x + y + a + b + "</li>";
+        }
+      }
+    }
+  }
 
   console.log("Hello Rigo from the console!");
 };
